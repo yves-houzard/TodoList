@@ -1,0 +1,13 @@
+@use 'src/styles/vars' as v;
+
+.header{
+  width: 100vw;
+  height: 10vh;
+  background-color: v.$color-medium;
+  &__title{
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 1rem 1rem ;
+  }
+}

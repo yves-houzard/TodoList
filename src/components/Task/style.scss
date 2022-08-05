@@ -1,0 +1,62 @@
+@use 'src/styles/vars' as v;
+
+
+
+.task{
+ display: flex;
+ flex-direction: row;
+  &-item{
+    display: grid;
+    width: 100%;
+    background-color: v.$color-light;
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+    padding: 1rem;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    grid-template-columns: 1rem auto;
+    gap: 1rem;
+    &--done{
+      opacity: 0.5;
+      text-decoration: line-through;
+    }
+  }
+  &-btn{
+    border: none;
+    width: 2rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: v.$color-light;
+    margin: 0.5rem 0;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background: #e27777;
+  }
+  &-btn:hover{
+    background: #d34343;
+  }
+}
+
+input[type="checkbox"]{
+  appearance: none;
+  background: v.$color-light;
+  margin: 0 0.5rem;
+  width: 1rem;
+  height: 1rem;
+  outline: 1px solid black;
+  display: grid;
+  place-content: center;
+}
+input[type="checkbox"]::before{
+  content: "";
+  width: .8rem;
+  height: .8rem;
+  transform: scale(0);
+  transition: 0.12s transform ease-in-out;
+  background: v.$color-checked;
+  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+}
+input[type="checkbox"]:checked::before{
+  transform: scale(1);
+}
+

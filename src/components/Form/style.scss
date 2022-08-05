@@ -1,0 +1,20 @@
+@use 'src/styles/vars' as v;
+
+.form{
+    &-item{
+      width: 100%;
+      height: 3rem;
+      font-size: 1.5rem;
+      margin: 1rem 0;
+      padding: 0.5rem 1rem;
+      text-align: left;
+      background-color: v.$color-light;
+      border-radius: 5px;
+      border: none;
+      font-family: 'Georgia', serif;
+      &::placeholder{
+        font-family: 'Georgia', serif;
+      }
+    }
+  }
+
